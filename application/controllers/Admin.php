@@ -33,6 +33,14 @@ class Admin extends CI_Controller {
         $this->load->view('login/lost_pass');
         $this->load->view('login/template/footer');
     }
+    public function dashboard()
+    {
+        $data['title'] = "dashboard Admin";
+        $this->load->view('admin/template/header',$data);
+        $this->load->view('admin/template/sidebar');
+        $this->load->view('admin/dashboard');
+        $this->load->view('admin/template/footer');
+    }
 }
 
 /* End of file Admin.php and path \application\controllers\Admin.php */
